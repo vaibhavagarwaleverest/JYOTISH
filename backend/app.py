@@ -19,7 +19,7 @@ client = DataAPIClient(astra_db_token)
 database = client.get_database(astra_db_endpoint)
 collection = database.get_collection(astra_db_collection)
 app = Flask(__name__)
-CORS(app,resources={r"/*": {"origins": "*", "allow_headers": ["Content-Type", "Token"]}})
+CORS(app,resources={r"/detail": {"origins": "*", "allow_headers": ["Content-Type", "Token"]}})
 def flatten_dict(d, parent_key='', sep=' '):
     """
     Flatten a nested dictionary into a single-level dictionary.
