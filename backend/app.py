@@ -619,7 +619,18 @@ def func():
             )
 
             # Return the response as JSON
-            return jsonify(result)
+            return jsonify({
+                    "content": str([{"name": name,
+                                    "city": city,
+                                    "dob": dob,
+                                    "gender": gender,
+                                    "house_data": house_data,
+                                    "planet_data": planet_data,
+                                    "zodiac_data": zodiac_data,
+                                    }]),
+                    "$vector": vector_embedding,
+                    "metadata": metadata  # Add the vector embedding
+                })
 
         except Exception as e:
             return jsonify({"error": str(e)}), 500
