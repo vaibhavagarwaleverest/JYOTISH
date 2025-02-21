@@ -374,15 +374,24 @@ def func():
     else:
         try:
             # Get JSON data from the request
-            data = request.json
+            # data = request.json
 
-            # Extract user inputs
-            name = data['name']
-            dob = data['dob']
-            time = data['time']
-            gender = data['gender']
-            state = data['state']
-            city = data['city']
+            # # Extract user inputs
+            # name = data['name']
+            # dob = data['dob']
+            # time = data['time']
+            # gender = data['gender']
+            # state = data['state']
+            # city = data['city']
+            data = request.form
+
+# Extract user inputs
+            name = data.get('name')
+            dob = data.get('dob')
+            time = data.get('time')
+            gender = data.get('gender')
+            state = data.get('state')
+            city = data.get('city')
 
             # Get latitude and longitude using geopy
             geolocator = Nominatim(user_agent="my_geocoding_app")
