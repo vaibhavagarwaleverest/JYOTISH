@@ -383,6 +383,7 @@ def func():
             # gender = data['gender']
             # state = data['state']
             # city = data['city']
+            console.log(request)
             data = request.form
 
 # Extract user inputs
