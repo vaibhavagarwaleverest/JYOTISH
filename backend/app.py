@@ -384,8 +384,9 @@ def func():
             # state = data['state']
             # city = data['city']
             print(request)
-            data = request.form
 
+            data = request.form
+            print(data)
 # Extract user inputs
             name = data.get('name')
             dob = data.get('dob')
