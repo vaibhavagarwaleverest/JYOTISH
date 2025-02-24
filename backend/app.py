@@ -392,6 +392,9 @@ def func():
             gender = data.get('gender')
             state = data.get('state')
             city = data.get('city')
+            print(name)
+            print(dob)
+            print(time)
 
             # Get latitude and longitude using geopy
             geolocator = Nominatim(user_agent="my_geocoding_app")
